@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Alerts - RescueSync</title>
+  <link rel="stylesheet" href="alert.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="icon" type="image/x-icon" href="favicon-32x32.png" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.ico" alt="RescueSync Logo" class="logo-img" />
+      RescueSync: Disaster Coordination System
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="alerts.html">Alerts</a></li>
+      <li><a href="get-help.html">Emergency</a></li>
+      <li><a href="recovery.html">Recovery</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </nav>
+
+
+  <section class="alerts-section">
+    <h2>Live Disaster Alerts</h2>
+    <button onclick="addTestAlert()">➕ Add Test Alert</button>
+    <div id="alerts"></div>
+    <div id="map"></div>
+  </section>
+
+  <audio id="alert-sound" src="https://www.soundjay.com/buttons/beep-07.wav" preload="auto"></audio>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-database-compat.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  
+   <script src="alerts.js"></script>
+</body>
+</html>
